@@ -1,0 +1,22 @@
+<!-- <p>sidebar works!</p> -->
+
+<mat-card class="mt10 mb20">
+    <mat-action-list>
+        <div mat-subheader>Menu
+            <button mat-list-item routerLink="/admin"><mat-icon class="top" mat-list-icon
+                    style="color: #673ab7;">home</mat-icon>&ensp;Home</button>
+            <button mat-list-item routerLink="/admin/profile"><mat-icon class="top" mat-list-icon
+                    style="color: #673ab7;">account_circle</mat-icon>&ensp;Profile</button>
+            <button mat-list-item routerLink="/admin/categories"><mat-icon class="top" mat-list-icon
+                    style="color: #673ab7;">list</mat-icon>&ensp;Categories</button>
+            <button mat-list-item routerLink="/admin/add-category"><mat-icon class="top" mat-list-icon
+                    style="color: #673ab7;">add_circle_outline</mat-icon>&ensp;Add Categories</button>
+            <button mat-list-item routerLink="/admin/quizzes"><mat-icon class="top" mat-list-icon
+                    style="color: #673ab7;">quiz</mat-icon>&ensp;Quizzes</button>
+            <button mat-list-item routerLink="/admin/add-quiz"><mat-icon class="top" mat-list-icon
+                    style="color: #673ab7;">add</mat-icon>&ensp;Add Quiz</button>
+            <button mat-list-item (click)="logout()"><mat-icon class="top" mat-list-icon
+                    style="color: #673ab7;">logout</mat-icon>&ensp;Logout</button>
+        </div>
+    </mat-action-list>
+</mat-card>

@@ -1,0 +1,20 @@
+.example-spacer {
+    flex: 1 1 auto;
+  }
+  .home-style{
+    text-decoration: none;
+    color: beige;
+  }
+  .font-size{
+    font-size: 16px;
+  }
+
+  .footer{
+    margin-top: 15px;
+    text-align: center;
+    
+  }
+  .back{
+    background-color: #ff4081;
+  }
+ 

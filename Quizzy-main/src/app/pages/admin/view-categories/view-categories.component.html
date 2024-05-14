@@ -1,0 +1,30 @@
+<!-- <p>view-categories works!</p> -->
+
+
+<mat-card class="mt10">
+    <h1 class="p10">All Categories</h1>
+    <mat-list>
+        <mat-list-item *ngFor="let c of categories">
+            <mat-icon matListItemIcon color="accent">category</mat-icon>
+            <div matListItemTitle>{{c.title}}</div>
+            <div matListItemLine>{{c.description}}</div>
+            <div><button matListItemLine mat-raised-button style="background-color: red; color: white;" class="right"
+                    (click)="deleteCategory(c.cid)">
+                    <mat-icon>delete</mat-icon>
+                    Delete
+                </button></div>
+            <hr>
+        </mat-list-item>
+      
+
+    </mat-list>
+    <div class="container text-center mt10 mb10">
+        <button routerLink="/admin/add-category" mat-raised-button style="background-color: #673ab7; color: white;">
+            <mat-icon>add_circle_outline</mat-icon>
+            Add
+            New Category</button>
+    </div>
+</mat-card>
+
+<div class="container" style="margin-bottom: 146px;">
+</div>

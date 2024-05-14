@@ -1,0 +1,41 @@
+<mat-toolbar style="background-color: #341a62;" class="position">
+  <!-- <button mat-icon-button class="example-icon home-style" aria-label="Example icon-button with menu icon">
+      <mat-icon>menu_book</mat-icon>
+    </button> -->
+  <a routerLink="/" class="home-style"><span><img src="../../../assets/quizzy-logo.png" style="margin-top: 10px;"
+        width="165" height="60" alt=""></span></a>
+  <span class="example-spacer"></span>
+
+  <a *ngIf="!isLoggedin" [routerLink]="'/login'" style="margin-right: 50px; margin-bottom: 10px" mat-icon-button
+    class="example-icon favorite-icon home-style" aria-label="Example icon-button with heart icon">
+    Login
+  </a>
+
+  <!-- <p class="font-size">Login</p> -->
+
+  <a *ngIf="!isLoggedin" [routerLink]="'/signup'" style="margin-right: 50px; margin-bottom: 10px;" mat-icon-button
+    class="example-icon favorite-icon home-style" aria-label="Example icon-button with heart icon">
+    Register
+  </a>
+
+  <a (click)="logout()" *ngIf="isLoggedin" style="margin-right: 50px; margin-bottom: 10px" mat-icon-button
+    class="example-icon favorite-icon home-style" aria-label="Example icon-button with heart icon">
+    Logout |
+  </a>
+
+  <a *ngIf="isLoggedin &&(user.authorities[0].authority == 'ADMIN')" routerLink="/admin/profile"
+    style="margin-right: 120px; margin-bottom: 10px;text-decoration: none;color:white;" mat-icon-button
+    class="example-icon favorite-icon home-style" aria-label="Example icon-button with heart icon">
+    {{user.username}}
+  </a>
+
+  <a *ngIf="isLoggedin && (user.authorities[0].authority == 'NORMAL')" routerLink="/user-dashboard"
+    style="margin-right: 120px; margin-bottom: 10px;text-decoration: none;color:white;"
+    mat-icon-button class="example-icon favorite-icon home-style" aria-label="Example icon-button with heart icon">
+      {{user.username}} 
+    </a>
+
+
+
+
+</mat-toolbar>

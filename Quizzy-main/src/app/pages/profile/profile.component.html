@@ -1,0 +1,53 @@
+<!-- <p>profile works!</p> -->
+
+
+<mat-card *ngIf="user" class="mt10" style="margin-bottom: 104px;">
+    <h1 style="margin-left: 20px; margin-top: 10px;">Your Profile Details</h1>
+
+    <!-- {{user | json}} -->
+    <mat-card-content>
+        <!-- profile details -->
+        <div class="bootstrap-wrapper">
+            <div class="container">
+                <div class="container text-center">
+                    <!-- <h1>hlw</h1> -->
+                    <img src="https://cdn.icon-icons.com/icons2/1378/PNG/512/avatardefault_92824.png" alt=""
+                        class="img">
+                    <h1>{{user.firstname}} {{user.lastname}}</h1>
+
+                </div>
+                <div class="row">
+                    <div class="col-md-10 offset-md-1">
+                        <!-- table -->
+                        <table class="table text-center mb20">
+                            <tr>
+                                <td>Username</td>
+                                <td>{{user.username}}</td>
+                            </tr>
+                            <tr>
+                                <td>UserId</td>
+                                <td>{{user.id}}</td>
+                            </tr>
+                            <tr>
+                                <td>Phone</td>
+                                <td>{{user.phone}}</td>
+                            </tr>
+                            <tr>
+                                <td>Role</td>
+                                <td>{{user.authorities[0].authority}}</td>
+                            </tr>
+                            <tr>
+                                <td>Status</td>
+                                <td>{{user.enabled?"ACTIVE":"NOTACTIVE"}}</td>
+                            </tr>
+                        </table>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </mat-card-content>
+
+  
+
+
+</mat-card>
